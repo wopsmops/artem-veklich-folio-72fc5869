@@ -5,11 +5,20 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { PageTransition } from "@/components/PageTransition";
 import { ALL_FILTERS, projects } from "@/lib/projects";
 
-export const Route = createFileRoute("/projects/")({ component: ProjectsPage });
+type ProjectsSearch = { tag?: string };
+
+export const Route = createFileRoute("/projects/")({
+  validateSearch: (search: Record<string, unknown>): ProjectsSearch => ({
+    tag: typeof search.tag === "string" ? search.tag : undefined,
+  }),
+  component: ProjectsPage,
+});
 
 function ProjectsPage() {
   const { t } = useTranslation();
-  const [filter, setFilter] = useState("all");
+  const { tag } = Route.useSearch();
+  const initial = tag && ALL_FILTERS.includes(tag) ? tag : "all";
+  const [filter, setFilter] = useState(initial);
   const list = filter === "all" ? projects : projects.filter((p) => p.tags.includes(filter));
 
   return (
@@ -23,13 +32,13 @@ function ProjectsPage() {
         </p>
 
         <div className="mt-6 flex flex-wrap gap-2">
-          {ALL_FILTERS.map((tag) => {
-            const active = filter === tag;
-            const label = tag === "all" ? t("projects.filter_all") : tag;
+          {ALL_FILTERS.map((tagName) => {
+            const active = filter === tagName;
+            const label = tagName === "all" ? t("projects.filter_all") : tagName;
             return (
               <button
-                key={tag}
-                onClick={() => setFilter(tag)}
+                key={tagName}
+                onClick={() => setFilter(tagName)}
                 style={{
                   fontSize: 11,
                   padding: "4px 10px",
