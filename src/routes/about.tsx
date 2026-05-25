@@ -30,9 +30,10 @@ function AboutPage() {
             <div key={group}>
               <div
                 style={{
-                  color: "var(--text-muted)",
-                  letterSpacing: "0.1em",
+                  color: "var(--text-section-label)",
+                  letterSpacing: "0.08em",
                   fontSize: 11,
+                  fontWeight: 500,
                   textTransform: "uppercase",
                   marginBottom: 8,
                 }}

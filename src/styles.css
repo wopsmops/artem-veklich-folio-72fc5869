@@ -13,13 +13,17 @@
     --border-hover: #D4D4D4;
     --text-primary: #111111;
     --text-muted: #888888;
+    --text-section-label: #111111;
+    --text-subtitle: #444444;
+    --text-card-desc: #555555;
+    --text-context-tag: #444444;
     --text-placeholder: #BBBBBB;
     --accent: #F59E0B;
     --accent-bright: #FFD528;
     --accent-tint: rgba(245, 158, 11, 0.08);
-    --accent-border: rgba(245, 158, 11, 0.30);
+    --accent-border: #D97706;
     --accent-active-bg: rgba(245, 158, 11, 0.10);
-    --accent-active-border: rgba(245, 158, 11, 0.35);
+    --accent-active-border: #D97706;
     --dot-ring: #FFFFFF;
   }
 
@@ -34,6 +38,10 @@
       --border-hover: #2a2a2a;
       --text-primary: #EFEFEF;
       --text-muted: #585858;
+      --text-section-label: #EFEFEF;
+      --text-subtitle: #A0A0A0;
+      --text-card-desc: #A0A0A0;
+      --text-context-tag: #A0A0A0;
       --text-placeholder: #333333;
       --accent-tint: rgba(245, 158, 11, 0.04);
       --accent-border: rgba(245, 158, 11, 0.20);

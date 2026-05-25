@@ -50,7 +50,7 @@ function ExperiencePage() {
         <h1 style={{ fontSize: 24, fontWeight: 500, color: "var(--text-primary)", marginBottom: 8 }}>
           experience
         </h1>
-        <p style={{ color: "var(--text-muted)", fontSize: 14 }}>
+        <p style={{ color: "var(--text-subtitle)", fontSize: 14 }}>
           work and education, in rough order.
         </p>
 
@@ -81,10 +81,10 @@ function ExperiencePage() {
                 <div style={{ fontSize: 14, fontWeight: 500, color: "var(--text-primary)" }}>
                   {e.title}
                 </div>
-                <div style={{ fontSize: 12, color: "var(--text-muted)" }}>
+                <div style={{ fontSize: 12, color: "var(--text-subtitle)" }}>
                   {e.org} · {e.date} · {e.kind}
                 </div>
-                <p className="mt-1.5 line-clamp-2" style={{ fontSize: 12, color: "var(--text-muted)" }}>
+                <p className="mt-1.5 line-clamp-2" style={{ fontSize: 12, color: "var(--text-card-desc)" }}>
                   {e.desc}
                 </p>
               </motion.li>

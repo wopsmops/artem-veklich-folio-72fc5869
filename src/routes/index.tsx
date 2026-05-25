@@ -88,9 +88,10 @@ function Home() {
       <section className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
         <div
           style={{
-            color: "var(--text-muted)",
-            letterSpacing: "0.1em",
+            color: "var(--text-section-label)",
+            letterSpacing: "0.08em",
             fontSize: 11,
+            fontWeight: 500,
             textTransform: "uppercase",
           }}
         >

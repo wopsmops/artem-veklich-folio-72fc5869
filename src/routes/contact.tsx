@@ -11,7 +11,7 @@ function ContactPage() {
         <h1 style={{ fontSize: 28, fontWeight: 600, color: "var(--text-primary)", letterSpacing: "-0.02em" }}>
           get in touch
         </h1>
-        <p className="mt-3" style={{ color: "var(--text-muted)", fontSize: 14 }}>
+        <p className="mt-3" style={{ color: "var(--text-subtitle)", fontSize: 14 }}>
           best reached by email. happy to chat about rail, RF, or anything connected.
         </p>
 

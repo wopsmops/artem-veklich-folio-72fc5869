@@ -37,7 +37,7 @@ export function ProjectCard({ project }: { project: Project }) {
           </div>
           <p
             className="line-clamp-2"
-            style={{ fontSize: 11, color: "var(--text-muted)", marginTop: 4 }}
+            style={{ fontSize: 11, color: "var(--text-card-desc)", marginTop: 4 }}
           >
             {project.desc}
           </p>
@@ -51,7 +51,7 @@ export function ProjectCard({ project }: { project: Project }) {
                     fontSize: 10,
                     borderRadius: 3,
                     padding: "2px 6px",
-                    color: ctx ? "var(--text-muted)" : "var(--accent)",
+                    color: ctx ? "var(--text-context-tag)" : "var(--accent)",
                     border: `1px solid ${ctx ? "var(--border-subtle)" : "var(--accent-border)"}`,
                     background: ctx ? "transparent" : "var(--accent-tint)",
                   }}
