@@ -10,34 +10,34 @@ export function ProjectCard({ project }: { project: Project }) {
         params={{ slug: project.slug }}
         className="group block overflow-hidden rounded-lg transition-colors"
         style={{
-          background: "#13151c",
-          border: "1px solid #1e1e1e",
+          background: "var(--bg-surface)",
+          border: "1px solid var(--border)",
         }}
         onMouseEnter={(e) =>
-          ((e.currentTarget as HTMLAnchorElement).style.borderColor = "#2a2a2a")
+          ((e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--border-hover)")
         }
         onMouseLeave={(e) =>
-          ((e.currentTarget as HTMLAnchorElement).style.borderColor = "#1e1e1e")
+          ((e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--border)")
         }
       >
         <div
           className="flex items-center justify-center"
           style={{
             height: 120,
-            background: "#16181f",
-            color: "#333",
+            background: "var(--bg-image-placeholder)",
+            color: "var(--text-placeholder)",
             fontSize: 11,
           }}
         >
           [ image ]
         </div>
         <div style={{ padding: 12 }}>
-          <div style={{ fontSize: 13, fontWeight: 500, color: "#EFEFEF" }}>
+          <div style={{ fontSize: 13, fontWeight: 500, color: "var(--text-primary)" }}>
             {project.title}
           </div>
           <p
             className="line-clamp-2"
-            style={{ fontSize: 11, color: "#585858", marginTop: 4 }}
+            style={{ fontSize: 11, color: "var(--text-muted)", marginTop: 4 }}
           >
             {project.desc}
           </p>
@@ -51,9 +51,9 @@ export function ProjectCard({ project }: { project: Project }) {
                     fontSize: 10,
                     borderRadius: 3,
                     padding: "2px 6px",
-                    color: ctx ? "#585858" : "#F59E0B",
-                    border: `1px solid ${ctx ? "#222" : "#F59E0B33"}`,
-                    background: ctx ? "transparent" : "#F59E0B0a",
+                    color: ctx ? "var(--text-muted)" : "var(--accent)",
+                    border: `1px solid ${ctx ? "var(--border-subtle)" : "var(--accent-border)"}`,
+                    background: ctx ? "transparent" : "var(--accent-tint)",
                   }}
                 >
                   {t}

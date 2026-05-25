@@ -31,7 +31,7 @@ function Home() {
                 key="h"
                 style={{
                   fontWeight: 600,
-                  color: "#EFEFEF",
+                  color: "var(--text-primary)",
                   letterSpacing: "-0.02em",
                   lineHeight: 1.1,
                 }}
@@ -54,16 +54,16 @@ function Home() {
                 <Link
                   to="/projects"
                   className="rounded-md px-4 py-2 text-sm transition-colors"
-                  style={{ background: "#F59E0B", color: "#0F1117", fontWeight: 500 }}
-                  onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#FFD528")}
-                  onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "#F59E0B")}
+                  style={{ background: "var(--accent)", color: "#0F1117", fontWeight: 500 }}
+                  onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "var(--accent-bright)")}
+                  onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "var(--accent)")}
                 >
                   view projects →
                 </Link>
                 <Link
                   to="/contact"
                   className="rounded-md px-4 py-2 text-sm"
-                  style={{ border: "1px solid #2a2a2a", color: "#EFEFEF" }}
+                  style={{ border: "1px solid var(--border)", color: "var(--text-primary)" }}
                 >
                   get in touch
                 </Link>
@@ -83,12 +83,12 @@ function Home() {
         </div>
       </section>
 
-      <div style={{ borderTop: "1px solid #1e1e1e" }} />
+      <div style={{ borderTop: "1px solid var(--border)" }} />
 
       <section className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
         <div
           style={{
-            color: "#585858",
+            color: "var(--text-muted)",
             letterSpacing: "0.1em",
             fontSize: 11,
             textTransform: "uppercase",

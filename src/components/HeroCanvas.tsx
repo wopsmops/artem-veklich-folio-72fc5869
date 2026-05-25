@@ -12,6 +12,13 @@ export function HeroCanvas() {
     let raf = 0;
     const dpr = window.devicePixelRatio || 1;
 
+    const mql = window.matchMedia("(prefers-color-scheme: dark)");
+    let lineAlpha = mql.matches ? 0.18 : 0.12;
+    const onScheme = (e: MediaQueryListEvent) => {
+      lineAlpha = e.matches ? 0.18 : 0.12;
+    };
+    mql.addEventListener("change", onScheme);
+
     const resize = () => {
       const { width, height } = canvas.getBoundingClientRect();
       canvas.width = width * dpr;
@@ -46,7 +53,7 @@ export function HeroCanvas() {
           const dy = pts[i].y - pts[j].y;
           const d = Math.hypot(dx, dy);
           if (d < 130) {
-            ctx.strokeStyle = `rgba(245, 158, 11, ${0.15 * (1 - d / 130)})`;
+            ctx.strokeStyle = `rgba(245, 158, 11, ${lineAlpha * (1 - d / 130)})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(pts[i].x, pts[i].y);
@@ -56,7 +63,7 @@ export function HeroCanvas() {
         }
       }
       for (const p of pts) {
-        ctx.fillStyle = "rgba(245, 158, 11, 0.5)";
+        ctx.fillStyle = `rgba(245, 158, 11, ${Math.min(1, lineAlpha * 3)})`;
         ctx.beginPath();
         ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2);
         ctx.fill();
@@ -69,6 +76,7 @@ export function HeroCanvas() {
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", resize);
+      mql.removeEventListener("change", onScheme);
     };
   }, []);
 

@@ -28,14 +28,14 @@ export function Typewriter({ words }: { words: string[] }) {
   }, [text, deleting, i, words]);
 
   return (
-    <span style={{ color: "#F59E0B", fontSize: 16 }}>
+    <span style={{ color: "var(--accent)", fontSize: 16 }}>
       {text}
       <span
         style={{
           display: "inline-block",
           width: 8,
           marginLeft: 2,
-          color: "#FFD528",
+          color: "var(--accent-bright)",
           animation: "blink 1s steps(1) infinite",
         }}
       >

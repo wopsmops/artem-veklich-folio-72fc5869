@@ -16,10 +16,10 @@ function AboutPage() {
     <PageTransition>
       <section className="mx-auto max-w-3xl px-4 py-12 md:px-6 md:py-16">
         <Avatar size={80} />
-        <h1 className="mt-6" style={{ fontSize: 24, fontWeight: 500, color: "#EFEFEF" }}>
+        <h1 className="mt-6" style={{ fontSize: 24, fontWeight: 500, color: "var(--text-primary)" }}>
           about
         </h1>
-        <p className="mt-4" style={{ color: "#EFEFEF", fontSize: 14, lineHeight: 1.7 }}>
+        <p className="mt-4" style={{ color: "var(--text-primary)", fontSize: 14, lineHeight: 1.7 }}>
           I'm an engineer working across rail systems, RF, and applied hardware.
           I like building things that connect physical infrastructure to legible
           software — typically self-hosted, usually over-engineered.
@@ -30,7 +30,7 @@ function AboutPage() {
             <div key={group}>
               <div
                 style={{
-                  color: "#585858",
+                  color: "var(--text-muted)",
                   letterSpacing: "0.1em",
                   fontSize: 11,
                   textTransform: "uppercase",
@@ -47,9 +47,9 @@ function AboutPage() {
                       fontSize: 11,
                       borderRadius: 3,
                       padding: "3px 8px",
-                      color: "#F59E0B",
-                      border: "1px solid #F59E0B33",
-                      background: "#F59E0B0a",
+                      color: "var(--accent)",
+                      border: "1px solid var(--accent-border)",
+                      background: "var(--accent-tint)",
                     }}
                   >
                     {s}
@@ -61,13 +61,13 @@ function AboutPage() {
         </div>
 
         <div className="mt-10 flex gap-5">
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2" style={{ color: "#F59E0B", fontSize: 13 }}>
+          <a href="https://github.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2" style={{ color: "var(--accent)", fontSize: 13 }}>
             <Github size={14} /> github
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2" style={{ color: "#F59E0B", fontSize: 13 }}>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2" style={{ color: "var(--accent)", fontSize: 13 }}>
             <Linkedin size={14} /> linkedin
           </a>
-          <a href="mailto:hello@example.com" className="inline-flex items-center gap-2" style={{ color: "#F59E0B", fontSize: 13 }}>
+          <a href="mailto:hello@example.com" className="inline-flex items-center gap-2" style={{ color: "var(--accent)", fontSize: 13 }}>
             <Mail size={14} /> email
           </a>
         </div>
