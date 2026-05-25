@@ -42,7 +42,7 @@ export function ProjectCard({ project }: { project: Project }) {
             className="line-clamp-2"
             style={{ fontSize: 11, color: "var(--text-card-desc)", marginTop: 4 }}
           >
-            {project.desc}
+            {desc}
           </p>
           <div className="mt-3 flex flex-wrap gap-1.5">
             {project.tags.map((t) => {
