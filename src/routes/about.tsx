@@ -3,13 +3,19 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Portrait } from "@/components/Portrait";
 import { PageTransition } from "@/components/PageTransition";
+import { SkillPill } from "@/components/SkillPill";
+import { LanguageBar } from "@/components/LanguageBar";
+import { skillSections } from "@/data/skills";
+import { languages } from "@/data/languages";
 
 export const Route = createFileRoute("/about")({ component: AboutPage });
 
-const skillGroups: Record<string, string[]> = {
-  domains: ["rail", "aerospace", "networks", "hardware"],
-  languages: ["python", "typescript", "c", "matlab"],
-  tools: ["fastapi", "linux", "kicad", "wireguard"],
+const sectionLabelStyle: React.CSSProperties = {
+  textTransform: "uppercase",
+  fontSize: 11,
+  color: "#585858",
+  letterSpacing: "0.1em",
+  marginBottom: 10,
 };
 
 function AboutPage() {
@@ -25,40 +31,26 @@ function AboutPage() {
           {t("about.bio")}
         </p>
 
-        <div className="mt-10 space-y-6">
-          {Object.entries(skillGroups).map(([group, items]) => (
-            <div key={group}>
-              <div
-                style={{
-                  color: "var(--text-section-label)",
-                  letterSpacing: "0.08em",
-                  fontSize: 11,
-                  fontWeight: 500,
-                  textTransform: "uppercase",
-                  marginBottom: 8,
-                }}
-              >
-                {t(`about.${group}_label`, { defaultValue: group })}
-              </div>
-              <div className="flex flex-wrap gap-1.5">
-                {items.map((s) => (
-                  <span
-                    key={s}
-                    style={{
-                      fontSize: 11,
-                      borderRadius: 3,
-                      padding: "3px 8px",
-                      color: "var(--accent)",
-                      border: "1px solid var(--accent-border)",
-                      background: "var(--accent-tint)",
-                    }}
-                  >
-                    {s}
-                  </span>
+        <div className="mt-10">
+          {skillSections.map((section, idx) => (
+            <div key={section.label} style={{ marginTop: idx === 0 ? 0 : 24 }}>
+              <div style={sectionLabelStyle}>{section.label}</div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                {section.skills.map((s) => (
+                  <SkillPill key={s.name} skill={s} />
                 ))}
               </div>
             </div>
           ))}
+        </div>
+
+        <div style={{ marginTop: 32 }}>
+          <div style={sectionLabelStyle}>spoken languages</div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10, maxWidth: 380 }}>
+            {languages.map((l) => (
+              <LanguageBar key={l.name} language={l} />
+            ))}
+          </div>
         </div>
 
         <div className="mt-10 flex gap-5">
