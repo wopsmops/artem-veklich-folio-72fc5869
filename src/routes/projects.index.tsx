@@ -33,7 +33,7 @@ function ProjectsPage() {
                   borderRadius: 4,
                   border: `1px solid ${active ? "var(--accent-active-border)" : "var(--border)"}`,
                   background: active ? "var(--accent-active-bg)" : "transparent",
-                  color: active ? "var(--accent-bright)" : "var(--text-muted)",
+                  color: active ? "var(--accent)" : "var(--text-subtitle)",
                 }}
               >
                 {t}
