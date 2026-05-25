@@ -88,7 +88,7 @@ function Home() {
             style={{ marginBottom: 0 }}
           >
             <div className="mb-6 md:mb-0">
-              <Portrait width={240} className="md:w-[240px]" />
+              <Portrait className="w-[180px] md:w-[240px]" />
             </div>
           </motion.div>
         </div>
