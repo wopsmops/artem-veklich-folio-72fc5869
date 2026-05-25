@@ -78,8 +78,8 @@ export function Nav() {
                 to={it.to}
                 className="shrink-0 rounded-md transition-colors"
                 style={{
-                  fontSize: 12,
-                  padding: "4px 10px",
+                  fontSize: 14,
+                  padding: "6px 16px",
                   border: `1px solid ${active ? "var(--accent-active-border)" : "transparent"}`,
                   background: active ? "var(--accent-active-bg)" : "transparent",
                   color: active ? "var(--accent-bright)" : "var(--text-muted)",
