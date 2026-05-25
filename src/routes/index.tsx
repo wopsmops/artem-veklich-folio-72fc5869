@@ -6,6 +6,7 @@ import { Avatar } from "@/components/Avatar";
 import { ProjectCard } from "@/components/ProjectCard";
 import { PageTransition } from "@/components/PageTransition";
 import { projects } from "@/lib/projects";
+import portrait from "@/assets/artem-portrait.png";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -15,7 +16,7 @@ function Home() {
     <PageTransition>
       <section className="relative overflow-hidden">
         <HeroCanvas />
-        <div className="relative mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28">
+        <div className="relative mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-center">
           <motion.div
             initial="hidden"
             animate="show"
@@ -79,6 +80,31 @@ function Home() {
                 {child}
               </motion.div>
             ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative justify-self-center md:justify-self-end order-first md:order-last"
+          >
+            <div
+              className="relative overflow-hidden rounded-full"
+              style={{
+                width: "clamp(180px, 40vw, 280px)",
+                height: "clamp(180px, 40vw, 280px)",
+                border: "1.5px solid var(--accent-border)",
+                background: "var(--bg-surface)",
+                boxShadow: "0 0 0 6px var(--accent-tint)",
+              }}
+            >
+              <img
+                src={portrait}
+                alt="Portrait of artem veklich"
+                className="h-full w-full object-cover"
+                style={{ objectPosition: "center 20%" }}
+              />
+            </div>
           </motion.div>
         </div>
       </section>
