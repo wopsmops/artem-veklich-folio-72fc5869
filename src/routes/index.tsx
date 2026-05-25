@@ -66,7 +66,7 @@ function Home() {
                   className="rounded-md px-4 py-2 text-sm"
                   style={{ border: "1px solid var(--border)", color: "var(--text-primary)" }}
                 >
-                  get in touch
+                  {t("hero.cta_contact")}
                 </Link>
               </div>,
             ].map((child, idx) => (
