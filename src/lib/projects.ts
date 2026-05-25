@@ -18,14 +18,9 @@ export const projects: Project[] = rawProjects.map((p) => ({
   body: p.sections[0]?.body,
 }));
 
-export const ALL_FILTERS = [
-  "all",
-  "hardware",
-  "python",
-  "rail",
-  "homelab",
-  "uni",
-  "work",
-  "personal",
-  "hackathon",
-];
+const derivedTags = Array.from(
+  new Set(rawProjects.flatMap((p) => p.tags))
+).sort((a, b) => a.localeCompare(b));
+
+export const ALL_FILTERS = ["all", ...derivedTags];
+
