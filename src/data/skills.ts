@@ -25,7 +25,7 @@ export const skillSections: SkillSection[] = [
   {
     label: 'frameworks',
     skills: [
-      { name: 'FastAPI', projectTag: 'fastapi' },
+      { name: 'FastAPI' },
       { name: 'React' },
       { name: 'Next.js' },
       { name: 'Node.js' },
@@ -41,8 +41,8 @@ export const skillSections: SkillSection[] = [
       { name: 'KiCad', projectTag: 'hardware' },
       { name: 'Cadence CAD', projectTag: 'hardware' },
       { name: 'Fusion 360', projectTag: 'hardware' },
-      { name: 'AWR Microwave Office', projectTag: 'aerospace' },
-      { name: 'Ansys HFSS', projectTag: 'aerospace' },
+      { name: 'AWR Microwave Office', projectTag: 'hardware' },
+      { name: 'Ansys HFSS', projectTag: 'hardware' },
       { name: 'Soldering', projectTag: 'hardware' },
     ],
   },
@@ -79,7 +79,7 @@ export const skillSections: SkillSection[] = [
     label: 'networking',
     skills: [
       { name: 'TCP/IP', projectTag: 'homelab' },
-      { name: 'REST APIs', projectTag: 'fastapi' },
+      { name: 'REST APIs', projectTag: 'homelab' },
       { name: 'VLAN', projectTag: 'homelab' },
       { name: 'VPN / WireGuard', projectTag: 'homelab' },
       { name: 'IPv4/IPv6', projectTag: 'homelab' },

@@ -15,6 +15,7 @@ export function ProjectCard({ project }: { project: Project }) {
         style={{
           background: "var(--bg-surface)",
           border: "1px solid var(--border)",
+          opacity: project.status === "in-progress" ? 0.55 : 1,
         }}
         onMouseEnter={(e) =>
           ((e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--border-hover)")
