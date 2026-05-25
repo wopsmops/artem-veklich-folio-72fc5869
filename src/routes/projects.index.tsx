@@ -16,7 +16,7 @@ function ProjectsPage() {
         <h1 style={{ fontSize: 24, fontWeight: 500, color: "var(--text-primary)", marginBottom: 8 }}>
           projects
         </h1>
-        <p style={{ color: "var(--text-muted)", fontSize: 14 }}>
+        <p style={{ color: "var(--text-subtitle)", fontSize: 14 }}>
           a catalogue of things i've built
         </p>
 
