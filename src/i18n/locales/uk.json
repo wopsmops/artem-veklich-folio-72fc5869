@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "головна",
+    "projects": "проєкти",
+    "experience": "досвід",
+    "about": "про мене",
+    "contact": "контакти"
+  },
+  "hero": {
+    "intro": "[ЗАМІННИК] Я інженер, що працює в галузі залізничних систем, радіочастотних технологій та апаратного забезпечення. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "cta_projects": "переглянути проєкти →",
+    "cta_contact": "зв'язатися"
+  },
+  "projects": {
+    "page_title": "проєкти",
+    "page_subtitle": "каталог речей, які я створив",
+    "filter_all": "всі",
+    "descriptions": {
+      "goldeneye-uav": "Платформа спостереження VTOL із власним дизайном радіочастотного зв'язку та силової установки",
+      "platenations": "Трекер спостережень за номерними знаками з розпізнаванням OCR та візуалізацією на карті",
+      "rail-labels": "Система маркування активів для залізничної інфраструктури Великобританії",
+      "homelab-mesh": "Накладена мережа на основі WireGuard для з'єднання різнорідних вузлів",
+      "rf-sounder": "Пристрій зондування радіоканалу суб-ГГц на базі апаратного забезпечення SDR",
+      "transit-dash": "Дошка відображення руху у реальному часі для місцевих залізниць та автобусів"
+    }
+  },
+  "experience": {
+    "page_title": "досвід",
+    "page_subtitle": "робота та освіта, у приблизному хронологічному порядку."
+  },
+  "about": {
+    "page_title": "про мене",
+    "bio": "[ЗАМІННИК] Я інженер, що працює в галузі залізничних систем, радіочастотних технологій та апаратного забезпечення. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "domains_label": "галузі",
+    "languages_label": "мови",
+    "tools_label": "інструменти"
+  },
+  "contact": {
+    "page_title": "зв'язатися",
+    "subtitle": "Найкраще зв'язатися електронною поштою. Радий поговорити про залізниці, радіочастоти або будь-що пов'язане."
+  }
+}

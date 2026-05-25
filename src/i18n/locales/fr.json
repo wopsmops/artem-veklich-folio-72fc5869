@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "accueil",
+    "projects": "projets",
+    "experience": "expérience",
+    "about": "à propos",
+    "contact": "contact"
+  },
+  "hero": {
+    "intro": "[PROVISOIRE] Je suis ingénieur spécialisé dans les systèmes ferroviaires, les radiofréquences et le matériel électronique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
+    "cta_projects": "voir les projets →",
+    "cta_contact": "me contacter"
+  },
+  "projects": {
+    "page_title": "projets",
+    "page_subtitle": "un catalogue de choses que j'ai construites",
+    "filter_all": "tous",
+    "descriptions": {
+      "goldeneye-uav": "Plateforme de surveillance VTOL avec conception RF personnalisée et propulsion",
+      "platenations": "Tracker de plaques d'immatriculation par OCR avec visualisation cartographique",
+      "rail-labels": "Système d'étiquetage des actifs pour l'infrastructure ferroviaire britannique",
+      "homelab-mesh": "Réseau superposé basé sur WireGuard reliant des nœuds hétérogènes",
+      "rf-sounder": "Rig de sondage de canal sub-GHz construit sur matériel SDR",
+      "transit-dash": "Tableau de bord en temps réel pour les trains et bus locaux"
+    }
+  },
+  "experience": {
+    "page_title": "expérience",
+    "page_subtitle": "travail et formation, dans un ordre approximatif."
+  },
+  "about": {
+    "page_title": "à propos",
+    "bio": "[PROVISOIRE] Je suis ingénieur spécialisé dans les systèmes ferroviaires, les radiofréquences et le matériel électronique. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "domains_label": "domaines",
+    "languages_label": "langages",
+    "tools_label": "outils"
+  },
+  "contact": {
+    "page_title": "me contacter",
+    "subtitle": "Joignable de préférence par e-mail. Heureux de discuter de ferroviaire, de RF ou de quoi que ce soit de connecté."
+  }
+}
