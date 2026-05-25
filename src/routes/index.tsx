@@ -6,6 +6,7 @@ import { Avatar } from "@/components/Avatar";
 import { ProjectCard } from "@/components/ProjectCard";
 import { PageTransition } from "@/components/PageTransition";
 import { projects } from "@/lib/projects";
+import portrait from "@/assets/artem-portrait.png";
 
 export const Route = createFileRoute("/")({ component: Home });
 
