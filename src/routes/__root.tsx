@@ -93,7 +93,10 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <div style={{ background: "#0F1117", minHeight: "100vh", color: "#EFEFEF" }}>
         <Nav />
-        <Outlet />
+        <main className="pb-[72px] md:pb-0">
+          <Outlet />
+        </main>
+        <MobileTabBar />
       </div>
     </QueryClientProvider>
   );
