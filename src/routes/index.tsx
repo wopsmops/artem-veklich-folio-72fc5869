@@ -81,6 +81,31 @@ function Home() {
               </motion.div>
             ))}
           </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative justify-self-center md:justify-self-end order-first md:order-last"
+          >
+            <div
+              className="relative overflow-hidden rounded-full"
+              style={{
+                width: "clamp(180px, 40vw, 280px)",
+                height: "clamp(180px, 40vw, 280px)",
+                border: "1.5px solid var(--accent-border)",
+                background: "var(--bg-surface)",
+                boxShadow: "0 0 0 6px var(--accent-tint)",
+              }}
+            >
+              <img
+                src={portrait}
+                alt="Portrait of artem veklich"
+                className="h-full w-full object-cover"
+                style={{ objectPosition: "center 20%" }}
+              />
+            </div>
+          </motion.div>
         </div>
       </section>
 
