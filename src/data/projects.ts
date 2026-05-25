@@ -33,7 +33,7 @@ export const projects: Project[] = [
     slug: 'goldeneye-uav',
     title: 'GoldenEye UAV',
     description: 'VTOL surveillance platform with custom RF and propulsion design',
-    tags: ['aerospace', 'hardware', 'uni'],
+    tags: ['hardware', 'uni'],
     featured: true,
     tools: ['MATLAB', 'Ansys HFSS', 'AWR Microwave Office', 'C', 'MAVLink', 'Python'],
     sections: [
@@ -129,7 +129,7 @@ export const projects: Project[] = [
     slug: 'rf-sounder',
     title: 'RF Channel Sounder',
     description: 'Sub-GHz channel sounding rig built on SDR hardware',
-    tags: ['hardware', 'aerospace', 'uni'],
+    tags: ['hardware', 'uni'],
     featured: false,
     tools: ['MATLAB', 'AWR Microwave Office', 'Python'],
     sections: [
