@@ -47,17 +47,17 @@ function ExperiencePage() {
   return (
     <PageTransition>
       <section className="mx-auto max-w-3xl px-4 py-12 md:px-6 md:py-16">
-        <h1 style={{ fontSize: 24, fontWeight: 500, color: "#EFEFEF", marginBottom: 8 }}>
+        <h1 style={{ fontSize: 24, fontWeight: 500, color: "var(--text-primary)", marginBottom: 8 }}>
           experience
         </h1>
-        <p style={{ color: "#585858", fontSize: 14 }}>
+        <p style={{ color: "var(--text-muted)", fontSize: 14 }}>
           work and education, in rough order.
         </p>
 
         <div className="relative mt-10 pl-6">
           <div
             className="absolute left-1.5 top-1 bottom-1"
-            style={{ width: 1, background: "#F59E0B" }}
+            style={{ width: 1, background: "var(--accent)" }}
           />
           <ul className="flex flex-col gap-8">
             {entries.map((e, i) => (
@@ -74,17 +74,17 @@ function ExperiencePage() {
                   style={{
                     width: 8,
                     height: 8,
-                    background: "#F59E0B",
-                    boxShadow: "0 0 0 3px #0F1117",
+                    background: "var(--accent)",
+                    boxShadow: "0 0 0 3px var(--dot-ring)",
                   }}
                 />
-                <div style={{ fontSize: 14, fontWeight: 500, color: "#EFEFEF" }}>
+                <div style={{ fontSize: 14, fontWeight: 500, color: "var(--text-primary)" }}>
                   {e.title}
                 </div>
-                <div style={{ fontSize: 12, color: "#585858" }}>
+                <div style={{ fontSize: 12, color: "var(--text-muted)" }}>
                   {e.org} · {e.date} · {e.kind}
                 </div>
-                <p className="mt-1.5 line-clamp-2" style={{ fontSize: 12, color: "#585858" }}>
+                <p className="mt-1.5 line-clamp-2" style={{ fontSize: 12, color: "var(--text-muted)" }}>
                   {e.desc}
                 </p>
               </motion.li>

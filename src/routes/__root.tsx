@@ -13,14 +13,14 @@ import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center px-4" style={{ background: "#0F1117" }}>
+    <div className="flex min-h-screen items-center justify-center px-4" style={{ background: "var(--bg-page)" }}>
       <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold" style={{ color: "#EFEFEF" }}>404</h1>
-        <p className="mt-2 text-sm" style={{ color: "#585858" }}>
+        <h1 className="text-7xl font-bold" style={{ color: "var(--text-primary)" }}>404</h1>
+        <p className="mt-2 text-sm" style={{ color: "var(--text-muted)" }}>
           this page doesn't exist.
         </p>
         <div className="mt-6">
-          <Link to="/" style={{ color: "#F59E0B", fontSize: 13 }}>
+          <Link to="/" style={{ color: "var(--accent)", fontSize: 13 }}>
             ← home
           </Link>
         </div>
@@ -33,16 +33,16 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   return (
-    <div className="flex min-h-screen items-center justify-center px-4" style={{ background: "#0F1117" }}>
+    <div className="flex min-h-screen items-center justify-center px-4" style={{ background: "var(--bg-page)" }}>
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold" style={{ color: "#EFEFEF" }}>
+        <h1 className="text-xl font-semibold" style={{ color: "var(--text-primary)" }}>
           something went wrong
         </h1>
         <div className="mt-6 flex justify-center gap-2">
           <button
             onClick={() => { router.invalidate(); reset(); }}
             className="rounded-md px-4 py-2 text-sm"
-            style={{ background: "#F59E0B", color: "#0F1117" }}
+            style={{ background: "var(--accent)", color: "#0F1117" }}
           >
             try again
           </button>
@@ -87,7 +87,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body style={{ background: "#0F1117" }}>
+      <body style={{ background: "var(--bg-page)" }}>
         {children}
         <Scripts />
       </body>
@@ -99,7 +99,7 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
-      <div style={{ background: "#0F1117", minHeight: "100vh", color: "#EFEFEF" }}>
+      <div style={{ background: "var(--bg-page)", minHeight: "100vh", color: "var(--text-primary)" }}>
         <Nav />
         <Outlet />
       </div>

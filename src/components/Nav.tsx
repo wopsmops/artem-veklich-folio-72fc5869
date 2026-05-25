@@ -17,20 +17,24 @@ export function Nav() {
   return (
     <header
       className="sticky top-0 z-50 w-full"
-      style={{ background: "#0F1117ee", backdropFilter: "blur(8px)" }}
+      style={{
+        background: "var(--bg-nav)",
+        backdropFilter: "blur(8px)",
+        borderBottom: "1px solid var(--border)",
+      }}
     >
       <div
         style={{
           height: 2,
           background:
-            "linear-gradient(90deg, #F59E0B 0%, #FFD528 50%, #F59E0B 100%)",
+            "linear-gradient(90deg, var(--accent) 0%, var(--accent-bright) 50%, var(--accent) 100%)",
         }}
       />
       <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3 md:px-6">
         <Link
           to="/"
           className="shrink-0"
-          style={{ fontWeight: 500, fontSize: 15, color: "#EFEFEF" }}
+          style={{ fontWeight: 500, fontSize: 15, color: "var(--text-primary)" }}
         >
           artem veklich
         </Link>
@@ -45,15 +49,15 @@ export function Nav() {
                 style={{
                   fontSize: 12,
                   padding: "4px 10px",
-                  border: `1px solid ${active ? "#F59E0B44" : "transparent"}`,
-                  background: active ? "#F59E0B11" : "transparent",
-                  color: active ? "#FFD528" : "#585858",
+                  border: `1px solid ${active ? "var(--accent-active-border)" : "transparent"}`,
+                  background: active ? "var(--accent-active-bg)" : "transparent",
+                  color: active ? "var(--accent-bright)" : "var(--text-muted)",
                 }}
                 onMouseEnter={(e) => {
-                  if (!active) (e.currentTarget as HTMLAnchorElement).style.color = "#EFEFEF";
+                  if (!active) (e.currentTarget as HTMLAnchorElement).style.color = "var(--text-primary)";
                 }}
                 onMouseLeave={(e) => {
-                  if (!active) (e.currentTarget as HTMLAnchorElement).style.color = "#585858";
+                  if (!active) (e.currentTarget as HTMLAnchorElement).style.color = "var(--text-muted)";
                 }}
               >
                 {it.label}

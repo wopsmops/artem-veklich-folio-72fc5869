@@ -5,9 +5,9 @@ export function Avatar({ size = 52 }: { size?: number }) {
       style={{
         width: size,
         height: size,
-        border: "1.5px solid #F59E0B55",
-        background: "#1a1a2e",
-        color: "#EFEFEF",
+        border: "1.5px solid var(--accent-border)",
+        background: "var(--bg-surface)",
+        color: "var(--text-primary)",
         fontSize: size * 0.36,
         fontWeight: 500,
         letterSpacing: "0.02em",
