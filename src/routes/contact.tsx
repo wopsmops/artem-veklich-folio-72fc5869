@@ -19,10 +19,10 @@ function ContactPage() {
 
         <div className="mt-8">
           <a
-            href="mailto:hello@example.com"
+            href="mailto:artem@veklich.com"
             style={{ color: "var(--accent)", fontSize: 16, fontWeight: 500 }}
           >
-            hello@example.com
+            artem@veklich.com
           </a>
         </div>
 
