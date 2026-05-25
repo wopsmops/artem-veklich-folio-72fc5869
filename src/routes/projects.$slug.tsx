@@ -42,7 +42,7 @@ function ProjectDetail() {
         </h1>
 
         <div className="mt-3 flex flex-wrap gap-1.5">
-          {project.tags.map((t) => {
+          {project.tags.map((t: string) => {
             const ctx = CONTEXT_TAGS.has(t);
             return (
               <span
