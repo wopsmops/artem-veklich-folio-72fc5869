@@ -20,7 +20,6 @@ export const projects: Project[] = rawProjects.map((p) => ({
 
 export const ALL_FILTERS = [
   "all",
-  "aerospace",
   "hardware",
   "python",
   "rail",
