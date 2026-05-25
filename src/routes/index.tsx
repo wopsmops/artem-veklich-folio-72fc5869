@@ -16,7 +16,23 @@ function Home() {
     <PageTransition>
       <section className="relative overflow-hidden">
         <HeroCanvas />
-        <div className="relative mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28 flex flex-col md:flex-row items-start gap-8 lg:gap-12">
+        <div className="relative mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28 flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12">
+          {/* Mobile portrait (top of stack) */}
+          <img
+            src="/portrait.png"
+            alt="artem veklich"
+            className="md:hidden"
+            style={{
+              display: "block",
+              margin: "0 auto 24px",
+              width: 200,
+              height: "auto",
+              borderRadius: 12,
+              border: "1.5px solid rgba(245, 158, 11, 0.3)",
+              boxShadow: "0 0 24px rgba(245, 158, 11, 0.08)",
+            }}
+          />
+
           <motion.div
             initial="hidden"
             animate="show"
@@ -24,7 +40,7 @@ function Home() {
               hidden: {},
               show: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
             }}
-            className="flex flex-col items-start gap-5 md:flex-1 md:min-w-0"
+            className="flex flex-col items-center md:items-start gap-5 md:flex-1 md:min-w-0 text-center md:text-left w-full"
           >
             {[
               <h1
@@ -52,18 +68,19 @@ function Home() {
               </div>,
               <p
                 key="intro"
+                className="text-[14px] md:text-[15px]"
                 style={{
-                  fontSize: 15,
                   color: "var(--text-muted)",
                   lineHeight: 1.7,
                   maxWidth: 480,
-                  marginTop: 16,
-                  marginBottom: 24,
+                  marginTop: 12,
+                  marginBottom: 20,
+                  padding: "0 8px",
                 }}
               >
                 {t("hero.intro")}
               </p>,
-              <div key="c" className="flex flex-wrap gap-3">
+              <div key="c" className="flex flex-wrap justify-center md:justify-start gap-3">
                 <Link
                   to="/projects"
                   className="rounded-md px-4 py-2 text-sm transition-colors"
@@ -88,12 +105,14 @@ function Home() {
                   hidden: { opacity: 0, y: 20 },
                   show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
                 }}
+                className="w-full"
               >
                 {child}
               </motion.div>
             ))}
           </motion.div>
 
+          {/* Desktop portrait (right column) */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -113,6 +132,7 @@ function Home() {
             />
           </motion.div>
         </div>
+
       </section>
 
       <div style={{ borderTop: "1px solid var(--border)" }} />
