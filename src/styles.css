@@ -52,6 +52,8 @@
     --accent-active-border: rgba(245, 158, 11, 0.27);
     --dot-ring: #0F1117;
     --nav-icon-hover-bg: #1e1e1e;
+    --language-name: #EFEFEF;
+    --language-track: #1e1e1e;
   }
 
   html, body {
