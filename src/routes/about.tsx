@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Github, Linkedin, Mail } from "lucide-react";
-import { Avatar } from "@/components/Avatar";
+import { Portrait } from "@/components/Portrait";
 import { PageTransition } from "@/components/PageTransition";
 
 export const Route = createFileRoute("/about")({ component: AboutPage });
@@ -15,7 +15,7 @@ function AboutPage() {
   return (
     <PageTransition>
       <section className="mx-auto max-w-3xl px-4 py-12 md:px-6 md:py-16">
-        <Avatar size={80} />
+        <Portrait width={120} />
         <h1 className="mt-6" style={{ fontSize: 24, fontWeight: 500, color: "var(--text-primary)" }}>
           about
         </h1>
