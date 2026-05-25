@@ -7,7 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { Nav, MobileTabBar } from "@/components/Nav";
+import { Nav } from "@/components/Nav";
 
 import appCss from "../styles.css?url";
 
@@ -93,10 +93,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <div style={{ background: "#0F1117", minHeight: "100vh", color: "#EFEFEF" }}>
         <Nav />
-        <main className="pb-[72px] md:pb-0">
-          <Outlet />
-        </main>
-        <MobileTabBar />
+        <Outlet />
       </div>
     </QueryClientProvider>
   );
