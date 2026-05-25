@@ -59,7 +59,7 @@ function Home() {
                   onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "var(--accent-bright)")}
                   onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "var(--accent)")}
                 >
-                  view projects →
+                  {t("hero.cta_projects")}
                 </Link>
                 <Link
                   to="/contact"
