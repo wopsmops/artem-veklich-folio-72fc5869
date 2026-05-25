@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { PageTransition } from "@/components/PageTransition";
 
 export const Route = createFileRoute("/experience")({ component: ExperiencePage });
@@ -44,14 +45,15 @@ const entries: Entry[] = [
 ];
 
 function ExperiencePage() {
+  const { t } = useTranslation();
   return (
     <PageTransition>
       <section className="mx-auto max-w-3xl px-4 py-12 md:px-6 md:py-16">
         <h1 style={{ fontSize: 24, fontWeight: 500, color: "var(--text-primary)", marginBottom: 8 }}>
-          experience
+          {t("experience.page_title")}
         </h1>
         <p style={{ color: "var(--text-subtitle)", fontSize: 14 }}>
-          work and education, in rough order.
+          {t("experience.page_subtitle")}
         </p>
 
         <div className="relative mt-10 pl-6">

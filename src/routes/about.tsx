@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Portrait } from "@/components/Portrait";
 import { PageTransition } from "@/components/PageTransition";
 
@@ -12,17 +13,16 @@ const skillGroups: Record<string, string[]> = {
 };
 
 function AboutPage() {
+  const { t } = useTranslation();
   return (
     <PageTransition>
       <section className="mx-auto max-w-3xl px-4 py-12 md:px-6 md:py-16">
         <Portrait className="w-[120px]" />
         <h1 className="mt-6" style={{ fontSize: 24, fontWeight: 500, color: "var(--text-primary)" }}>
-          about
+          {t("about.page_title")}
         </h1>
         <p className="mt-4" style={{ color: "var(--text-primary)", fontSize: 14, lineHeight: 1.7 }}>
-          I'm an engineer working across rail systems, RF, and applied hardware.
-          I like building things that connect physical infrastructure to legible
-          software — typically self-hosted, usually over-engineered.
+          {t("about.bio")}
         </p>
 
         <div className="mt-10 space-y-6">
@@ -38,7 +38,7 @@ function AboutPage() {
                   marginBottom: 8,
                 }}
               >
-                {group}
+                {t(`about.${group}_label`, { defaultValue: group })}
               </div>
               <div className="flex flex-wrap gap-1.5">
                 {items.map((s) => (

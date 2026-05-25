@@ -12,12 +12,13 @@ export function HeroCanvas() {
     let raf = 0;
     const dpr = window.devicePixelRatio || 1;
 
-    const mql = window.matchMedia("(prefers-color-scheme: dark)");
-    let lineAlpha = mql.matches ? 0.18 : 0.12;
-    const onScheme = (e: MediaQueryListEvent) => {
-      lineAlpha = e.matches ? 0.18 : 0.12;
-    };
-    mql.addEventListener("change", onScheme);
+    const getAlpha = () =>
+      document.documentElement.classList.contains("dark") ? 0.18 : 0.12;
+    let lineAlpha = getAlpha();
+    const mo = new MutationObserver(() => { lineAlpha = getAlpha(); });
+    mo.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    const onThemeEvent = () => { lineAlpha = getAlpha(); };
+    window.addEventListener("av-theme-change", onThemeEvent);
 
     const resize = () => {
       const { width, height } = canvas.getBoundingClientRect();
@@ -76,7 +77,8 @@ export function HeroCanvas() {
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", resize);
-      mql.removeEventListener("change", onScheme);
+      mo.disconnect();
+      window.removeEventListener("av-theme-change", onThemeEvent);
     };
   }, []);
 
