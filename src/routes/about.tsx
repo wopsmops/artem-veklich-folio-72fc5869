@@ -60,7 +60,7 @@ function AboutPage() {
           <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2" style={{ color: "var(--accent)", fontSize: 13 }}>
             <Linkedin size={14} /> linkedin
           </a>
-          <a href="mailto:hello@example.com" className="inline-flex items-center gap-2" style={{ color: "var(--accent)", fontSize: 13 }}>
+          <a href="mailto:artem@veklich.com" className="inline-flex items-center gap-2" style={{ color: "var(--accent)", fontSize: 13 }}>
             <Mail size={14} /> email
           </a>
         </div>
