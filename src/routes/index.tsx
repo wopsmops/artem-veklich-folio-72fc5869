@@ -17,21 +17,6 @@ function Home() {
       <section className="relative overflow-hidden">
         <HeroCanvas />
         <div className="relative mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28 flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12">
-          {/* Mobile portrait (top of stack) */}
-          <img
-            src="/portrait.png"
-            alt="artem veklich"
-            className="md:hidden"
-            style={{
-              display: "block",
-              margin: "0 auto 24px",
-              width: 200,
-              height: "auto",
-              borderRadius: 12,
-              border: "1.5px solid rgba(245, 158, 11, 0.3)",
-              boxShadow: "0 0 24px rgba(245, 158, 11, 0.08)",
-            }}
-          />
 
           <motion.div
             initial="hidden"
