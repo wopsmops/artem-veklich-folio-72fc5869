@@ -1,3 +1,4 @@
+import "@/i18n";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -10,6 +11,9 @@ import {
 import { Nav } from "@/components/Nav";
 
 import appCss from "../styles.css?url";
+
+const themeInitScript = `(function(){try{var t=localStorage.getItem('av_theme');var d=t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(d)document.documentElement.classList.add('dark');}catch(e){}})();`;
+
 
 function NotFoundComponent() {
   return (
