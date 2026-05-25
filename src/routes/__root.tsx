@@ -7,7 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { Nav } from "@/components/Nav";
+import { Nav, MobileTabBar } from "@/components/Nav";
 
 import appCss from "../styles.css?url";
 
