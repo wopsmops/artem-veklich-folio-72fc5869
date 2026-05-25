@@ -26,6 +26,8 @@
     --accent-active-border: #D97706;
     --dot-ring: #FFFFFF;
     --nav-icon-hover-bg: #F3F4F6;
+    --language-name: #1a1a1a;
+    --language-track: #E5E7EB;
   }
 
   :root.dark {
@@ -50,6 +52,8 @@
     --accent-active-border: rgba(245, 158, 11, 0.27);
     --dot-ring: #0F1117;
     --nav-icon-hover-bg: #1e1e1e;
+    --language-name: #EFEFEF;
+    --language-track: #1e1e1e;
   }
 
   html, body {
