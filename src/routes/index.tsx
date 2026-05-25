@@ -16,7 +16,7 @@ function Home() {
     <PageTransition>
       <section className="relative overflow-hidden">
         <HeroCanvas />
-        <div className="relative mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28">
+        <div className="relative mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-center">
           <motion.div
             initial="hidden"
             animate="show"
