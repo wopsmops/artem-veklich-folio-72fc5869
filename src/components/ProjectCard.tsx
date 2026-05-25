@@ -37,7 +37,7 @@ export function ProjectCard({ project }: { project: Project }) {
           </div>
           <p
             className="line-clamp-2"
-            style={{ fontSize: 11, color: "var(--text-muted)", marginTop: 4 }}
+            style={{ fontSize: 11, color: "var(--text-card-desc)", marginTop: 4 }}
           >
             {project.desc}
           </p>
