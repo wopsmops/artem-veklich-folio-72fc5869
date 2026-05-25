@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "home",
+    "projects": "projects",
+    "experience": "experience",
+    "about": "about",
+    "contact": "contact"
+  },
+  "hero": {
+    "intro": "[PLACEHOLDER] I'm an engineer working across rail systems, RF, and applied hardware. I build things that connect physical infrastructure to legible software — typically self-hosted, usually over-engineered. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "cta_projects": "view projects →",
+    "cta_contact": "get in touch"
+  },
+  "projects": {
+    "page_title": "projects",
+    "page_subtitle": "a catalogue of things i've built",
+    "filter_all": "all",
+    "descriptions": {
+      "goldeneye-uav": "VTOL surveillance platform with custom RF and propulsion design",
+      "platenations": "Licence plate OCR sighting tracker with map visualisation",
+      "rail-labels": "Asset tagging system for UK rail infrastructure",
+      "homelab-mesh": "WireGuard-based overlay connecting heterogeneous nodes",
+      "rf-sounder": "Sub-GHz channel sounding rig built on SDR hardware",
+      "transit-dash": "Live realtime board for local rail and bus arrivals"
+    }
+  },
+  "experience": {
+    "page_title": "experience",
+    "page_subtitle": "work and education, in rough order."
+  },
+  "about": {
+    "page_title": "about",
+    "bio": "[PLACEHOLDER] I'm an engineer working across rail systems, RF, and applied hardware. I like building things that connect physical infrastructure to legible software — typically self-hosted, usually over-engineered.",
+    "domains_label": "domains",
+    "languages_label": "languages",
+    "tools_label": "tools"
+  },
+  "contact": {
+    "page_title": "get in touch",
+    "subtitle": "best reached by email. happy to chat about rail, RF, or anything connected."
+  }
+}

@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { HeroCanvas } from "@/components/HeroCanvas";
 import { Typewriter } from "@/components/Typewriter";
 import { Portrait } from "@/components/Portrait";
@@ -10,6 +11,7 @@ import { projects } from "@/lib/projects";
 export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
+  const { t } = useTranslation();
   const featured = projects.slice(0, 3);
   return (
     <PageTransition>
@@ -57,14 +59,14 @@ function Home() {
                   onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "var(--accent-bright)")}
                   onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "var(--accent)")}
                 >
-                  view projects →
+                  {t("hero.cta_projects")}
                 </Link>
                 <Link
                   to="/contact"
                   className="rounded-md px-4 py-2 text-sm"
                   style={{ border: "1px solid var(--border)", color: "var(--text-primary)" }}
                 >
-                  get in touch
+                  {t("hero.cta_contact")}
                 </Link>
               </div>,
             ].map((child, idx) => (

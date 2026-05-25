@@ -1,8 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { CONTEXT_TAGS, type Project } from "@/lib/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
+  const { t } = useTranslation();
+  const desc = t(`projects.descriptions.${project.slug}`, { defaultValue: project.desc });
   return (
     <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
       <Link
@@ -39,7 +42,7 @@ export function ProjectCard({ project }: { project: Project }) {
             className="line-clamp-2"
             style={{ fontSize: 11, color: "var(--text-card-desc)", marginTop: 4 }}
           >
-            {project.desc}
+            {desc}
           </p>
           <div className="mt-3 flex flex-wrap gap-1.5">
             {project.tags.map((t) => {

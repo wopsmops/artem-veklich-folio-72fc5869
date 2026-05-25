@@ -1,18 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Github, Linkedin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { PageTransition } from "@/components/PageTransition";
 
 export const Route = createFileRoute("/contact")({ component: ContactPage });
 
 function ContactPage() {
+  const { t } = useTranslation();
   return (
     <PageTransition>
       <section className="mx-auto max-w-2xl px-4 py-16 md:px-6 md:py-24">
         <h1 style={{ fontSize: 28, fontWeight: 600, color: "var(--text-primary)", letterSpacing: "-0.02em" }}>
-          get in touch
+          {t("contact.page_title")}
         </h1>
         <p className="mt-3" style={{ color: "var(--text-subtitle)", fontSize: 14 }}>
-          best reached by email. happy to chat about rail, RF, or anything connected.
+          {t("contact.subtitle")}
         </p>
 
         <div className="mt-8">
