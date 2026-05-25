@@ -1,4 +1,4 @@
-export function Portrait({ width = 240, className = "" }: { width?: number; className?: string }) {
+export function Portrait({ className = "" }: { className?: string }) {
   const mask = "linear-gradient(to bottom, black 40%, transparent 85%)";
   return (
     <img
@@ -6,7 +6,6 @@ export function Portrait({ width = 240, className = "" }: { width?: number; clas
       alt="artem veklich"
       className={className}
       style={{
-        width,
         height: "auto",
         display: "block",
         maskImage: mask,
