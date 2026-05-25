@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { HeroCanvas } from "@/components/HeroCanvas";
 import { Typewriter } from "@/components/Typewriter";
-import { Avatar } from "@/components/Avatar";
+import { Portrait } from "@/components/Portrait";
 import { ProjectCard } from "@/components/ProjectCard";
 import { PageTransition } from "@/components/PageTransition";
 import { projects } from "@/lib/projects";
@@ -15,7 +15,7 @@ function Home() {
     <PageTransition>
       <section className="relative overflow-hidden">
         <HeroCanvas />
-        <div className="relative mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28">
+        <div className="relative mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-28 flex flex-col md:flex-row md:items-stretch gap-8 md:gap-12">
           <motion.div
             initial="hidden"
             animate="show"
@@ -23,10 +23,9 @@ function Home() {
               hidden: {},
               show: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
             }}
-            className="flex flex-col items-start gap-5"
+            className="flex flex-col items-start gap-5 md:w-[58%] md:justify-center md:pb-12"
           >
             {[
-              <Avatar key="a" />,
               <h1
                 key="h"
                 style={{
@@ -79,6 +78,18 @@ function Home() {
                 {child}
               </motion.div>
             ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="order-first md:order-last md:w-[42%] flex md:items-end justify-center md:justify-end"
+            style={{ marginBottom: 0 }}
+          >
+            <div className="mb-6 md:mb-0">
+              <Portrait width={240} className="md:w-[240px]" />
+            </div>
           </motion.div>
         </div>
       </section>
