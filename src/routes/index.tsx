@@ -58,11 +58,18 @@ function Home() {
               <div key="t" className="min-h-[24px]">
                 <Typewriter
                   words={[
-                    "networks",
-                    "transport systems",
-                    "hardware",
-                    "connected systems",
-                    "applied engineering",
+                    "electrical engineer",
+                    "MEng student",
+                    "systems integrator",
+                    "hardware builder",
+                    "Ukrainian",
+                    "rail telecoms engineer",
+                    "football player",
+                    "network architect",
+                    "self-hoster",
+                    "urban design follower",
+                    "homelab operator",
+                    "over-engineer",
                   ]}
                 />
               </div>,
