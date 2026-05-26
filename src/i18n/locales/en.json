@@ -7,7 +7,7 @@
     "contact": "contact"
   },
   "hero": {
-    "intro": "[PLACEHOLDER] I'm an engineer working across rail systems, RF, and applied hardware. I build things that connect physical infrastructure to legible software — typically self-hosted, usually over-engineered. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "intro": "I explore how infrastructure connects the physical world to software: hardware, RF, rail systems, and the digital layers that cities run on. I study electrical engineering at Bath and work in Engineering & Technology at Transport for London, with a tendency to over-engineer everything in between.",
     "cta_projects": "view projects →",
     "cta_contact": "get in touch"
   },
@@ -37,6 +37,6 @@
   },
   "contact": {
     "page_title": "get in touch",
-    "subtitle": "best reached by email. happy to chat about rail, RF, or anything connected."
+    "subtitle": "Reach me by email, explore my work on GitHub, or connect on LinkedIn."
   }
 }

@@ -27,10 +27,10 @@ function ContactPage() {
         </div>
 
         <div className="mt-8 flex gap-5">
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2" style={{ color: "var(--accent)", fontSize: 13 }}>
+          <a href="https://github.com/wopsmops/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2" style={{ color: "var(--accent)", fontSize: 13 }}>
             <Github size={14} /> github
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2" style={{ color: "var(--accent)", fontSize: 13 }}>
+          <a href="https://www.linkedin.com/in/aveklich/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2" style={{ color: "var(--accent)", fontSize: 13 }}>
             <Linkedin size={14} /> linkedin
           </a>
         </div>
