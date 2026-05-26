@@ -80,6 +80,23 @@ function Home() {
               >
                 {t("hero.intro")}
               </p>,
+              <div
+                key="loc"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 16,
+                  fontSize: 12,
+                  color: "#585858",
+                  letterSpacing: "0.01em",
+                  marginTop: 12,
+                  marginBottom: 16,
+                }}
+              >
+                <span>🇬🇧 Bath &amp; London</span>
+                <span style={{ color: "#333333", padding: "0 2px" }}>•</span>
+                <span>🇵🇱 Warsaw</span>
+              </div>,
               <div key="c" className="flex flex-wrap justify-center md:justify-start gap-3">
                 <Link
                   to="/projects"

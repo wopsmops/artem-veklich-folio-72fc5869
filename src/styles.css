@@ -75,3 +75,6 @@
     overflow: hidden;
   }
 }
+
+.ukraine-link:hover { text-decoration: underline; }
+
